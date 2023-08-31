@@ -31,8 +31,16 @@
  */
 
 /* --- Dependencies --- */
-
-#define DISPOSITIVO_NAVE "AIRE COMPRIMIDO"
+// #define DEVICE_NAME "GENERAL"
+// #define DEVICE_NAME "TRANSELEVADOR 1"
+// #define DEVICE_NAME "TRANSELEVADOR 2"
+// #define DEVICE_NAME "TRANSELEVADOR 3"
+// #define DEVICE_NAME "ROBOT"
+// #define DEVICE_NAME "LINEA EMPAQUETADO"
+// #define DEVICE_NAME "MODULA 4"
+// #define DEVICE_NAME "MODULA 11"
+// #define DEVICE_NAME "AC OFICINAS"
+#define DEVICE_NAME "AIRE COMPRIMIDO"
 
 //Weidmuller includes
 #include "./src/weidosTasks.h"
@@ -412,8 +420,7 @@ void setup()
 {
   Serial.begin(SERIAL_LOGGER_BAUD_RATE);
   set_logging_function(logging_function);
-  Serial.println("Starting the setup code for %s", DISPOSITIVO_NAVE);
-  LogInfo("Starting the setup code for %s", DISPOSITIVO_NAVE);
+  LogInfo("Starting the setup code for %s", DEVICE_NAME);
   weidosSetup();
   connect_to_wifi();
   sync_device_clock_with_ntp_server();

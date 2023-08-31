@@ -54,31 +54,32 @@
 
 // Azure IoT Central
 #define DPS_ID_SCOPE "0ne00A56BD4"
-//#define IOT_CONFIG_DEVICE_ID "sbdncr6r4n"
-#define IOT_CONFIG_DEVICE_ID "12yvbq8k0uc"              //Aire comprimido
-//#define IOT_CONFIG_DEVICE_ID "2a0u68cv1az"              //AC Oficinas (Generalpor conductos)
-//#define IOT_CONFIG_DEVICE_ID "5sfzd28vxx"             //Transelevador 1
-//#define IOT_CONFIG_DEVICE_ID "288cgdcx94a"            //Transelevador 2
-//#define IOT_CONFIG_DEVICE_ID "fmlljozfb7"             //Transelevador 3
-//#define IOT_CONFIG_DEVICE_ID "2h8tdztj53u"            //General
-//#define IOT_CONFIG_DEVICE_ID "xcs3q36hrp"             //Robot
-//#define IOT_CONFIG_DEVICE_ID "2pzlfhqaly8"            //Linea empaquetado
-//#define IOT_CONFIG_DEVICE_ID "wxnbsetn9z"             //Modula 4
-//#define IOT_CONFIG_DEVICE_ID "pukp1akinp"               //Modula 11
+
+// #define IOT_CONFIG_DEVICE_ID "32ng6jftu8"       //General
+// #define IOT_CONFIG_DEVICE_ID "1sbmjyrz1oa"      //Transelevador 1
+// #define IOT_CONFIG_DEVICE_ID "1b66i9vydmw"      //Transelevador 2
+// #define IOT_CONFIG_DEVICE_ID "oahkpmo0i1"       //Transelevador 3
+// #define IOT_CONFIG_DEVICE_ID "97qu0wo8du"       //Robot
+// #define IOT_CONFIG_DEVICE_ID "2ey0wvfshde"      //Linea empaquetado
+// #define IOT_CONFIG_DEVICE_ID "ientu2u9jd"       //Modula 4
+// #define IOT_CONFIG_DEVICE_ID "1qm1p41k645"      //Modula 11
+// #define IOT_CONFIG_DEVICE_ID "1g1latrr3rl"      //AC Oficinas
+#define IOT_CONFIG_DEVICE_ID "12yvbq8k0uc"      //Aire comprimido
 
 // Use device key if not using certificates
 #ifndef IOT_CONFIG_USE_X509_CERT
-//#define IOT_CONFIG_DEVICE_KEY "kyFGW9qWk38tmlv0hBoC0KbjZjyhwahrCiv9ETHCa/Q="          //OriolTest device
-#define IOT_CONFIG_DEVICE_KEY "qbNgnq2WQ6ybPzFc1qAUPNIiRx9WW6Bhz2VpNhPZRfE="            //Aire comprimido
-//#define IOT_CONFIG_DEVICE_KEY "4damq3m2Ji0HgMhc8bc3bf5QPJkq4TrCKTqDuaQxty0="            //AC Oficinas (Generalpor conductos)
-//#define IOT_CONFIG_DEVICE_KEY "H2hG0fFfuj/t/32/2YA1ShMZ2fSjdISVxiuXvjYYDqc="            //Transelevador 1 device
-//#define IOT_CONFIG_DEVICE_KEY "NGq9caVy8X5wO8pfSHr0QqSoe0sQ/PuthDqho+Ehmzc="            //Transelevador 2 device
-//#define IOT_CONFIG_DEVICE_KEY "L0U/1ku7oj3nx1BmNvMape2Mtj0v/D0O1Q0RsAXIJHs="            //Transelevador 3 device
-//#define IOT_CONFIG_DEVICE_KEY "joYDqQZ8uPY1PRgB/dLktnV+wWJ8yTivbtgH5URJZ3k="            //General
-//#define IOT_CONFIG_DEVICE_KEY "m5DYhN9AEKIVruWnPbPzgbdBoT107fvqsH/Xt/x15Ts="            //Robot
-//#define IOT_CONFIG_DEVICE_KEY "Oo1XTUeDeBZYkKKKvIEYMu0UuAuHB759tj8+zJ30508="            //Linea empaquetado
-//#define IOT_CONFIG_DEVICE_KEY "o/UV1WxoPevozugeEft1TbYnFxpQ0ZbX4d9DJYjNKo8="            //Modula 4
-//#define IOT_CONFIG_DEVICE_KEY "IccoryKXcTwS5Vv7rmoFJN7CuF+vXD1i67c4DdRodrI="            //Modula 11
+
+// #define IOT_CONFIG_DEVICE_KEY "EkT6ZvbB0yDF71AmEUQ75Or3w7Y4sQenDKFsJwZ24N4="        //General
+// #define IOT_CONFIG_DEVICE_KEY "ZCJOH3zvqDBusCCTdtMHO2rcv4qWgVq5bzgkxwwIQIM="        //Transelevador 1
+// #define IOT_CONFIG_DEVICE_KEY "FH7ktxpbRgW2Nq/ms0eANQS2ZKEpdKQorBa98xpM3+E="        //Transelevador 2
+// #define IOT_CONFIG_DEVICE_KEY "afq88WexxzEbz26qV9WNv+ZqdSE5BePaZOyjR9zVGjw="        //Transelevador 3
+// #define IOT_CONFIG_DEVICE_KEY "WzZA6yTH6+cC8P/uPQuFWLwwFXdzn+2fhfGpMTwsMXI="        //Robot
+// #define IOT_CONFIG_DEVICE_KEY "BytnY5Dv11MkNg8w1BlrsyDJ89Mzq6TEVCTvfJEpDW4="        //Linea empaquetado
+// #define IOT_CONFIG_DEVICE_KEY "VozkBOAZnwyogHpN28p9A/aR39x0WYyGYdTgLHhYCmY="        //Modula 4
+// #define IOT_CONFIG_DEVICE_KEY "6feO9EMk5XJ6zYFHKa1Po98nZRuwhmQRyUb4x18DR1U="        //Modula 11
+// #define IOT_CONFIG_DEVICE_KEY "4damq3m2Ji0HgMhc8bc3bf5QPJkq4TrCKTqDuaQxty0="        //AC Oficinas
+#define IOT_CONFIG_DEVICE_KEY "qbNgnq2WQ6ybPzFc1qAUPNIiRx9WW6Bhz2VpNhPZRfE="        //Aire comprimido
+
 #endif // IOT_CONFIG_USE_X509_CERT
 
 // User-agent (url-encoded) provided by the MQTT client to Azure IoT Services.
