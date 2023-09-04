@@ -64,8 +64,17 @@ void weidosSetup(){
 
     Serial.println("Welcome");
     Ethernet.init(ETHERNET_CS);
-    while(!Ethernet.begin(mac, ETHERNET_TIMEOUT, ETHERNET_RESPONSE_TIMEOUT)){
-    Serial.print("e");
+    if(!Ethernet.begin(mac, ETHERNET_TIMEOUT, ETHERNET_RESPONSE_TIMEOUT))
+    {
+        for(int i=0; i<MODBUS_BEGIN_TRIES; i++)
+        {
+            if(!Ethernet.begin(mac, ETHERNET_TIMEOUT, ETHERNET_RESPONSE_TIMEOUT))
+            {
+                modbusLogger.logInfo("Ethernet reconnect!");
+                Serial.print("e");
+                delay(1000);
+            }else break;
+        }
     }
     modbusLogger.logInfo("Ethernet connected successfully");
 
