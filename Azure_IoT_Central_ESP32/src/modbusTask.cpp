@@ -81,6 +81,7 @@ void weidosSetup(){
         if(!modbusTCPClient.connected())
         {
             modbusTCPClient.begin(serverIP);
+            modbusLogger.logInfo("Modbus Client reconnect!");
             Serial.print("m");
             delay(1000);
         }else break;
