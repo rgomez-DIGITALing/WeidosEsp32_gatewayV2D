@@ -74,10 +74,19 @@ void weidosSetup(){
     Serial.println(Ethernet.localIP());
 
     modbusTCPClient.setTimeout(MODBUS_TIMEOUT);  
-    while(!modbusTCPClient.begin(serverIP)) {
-    Serial.print("m");
-    delay(1000);
+    modbusTCPClient.begin(serverIP);
+
+    for(int i=0; i<MODBUS_BEGIN_TRIES; i++)
+    {
+        if(!modbusTCPClient.connected())
+        {
+            modbusTCPClient.begin(serverIP);
+            modbusLogger.logInfo("Modbus Client reconnect!");
+            Serial.print("m");
+            delay(1000);
+        }else break;
     }
+
     modbusLogger.logInfo("Modbus Client connected successfully");
     modbusLogger.logInfo("End of modbusTask setup");
     
